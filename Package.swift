@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "BitcoinKit",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v13), .macOS(.v10_15)
     ],
     products: [
         .library(
@@ -14,9 +14,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/horizontalsystems/BitcoinCore.Swift.git", .upToNextMajor(from: "2.2.0")),
-        .package(url: "https://github.com/horizontalsystems/Hodler.Swift.git", .upToNextMajor(from: "2.0.0")),
-        .package(url: "https://github.com/horizontalsystems/HdWalletKit.Swift.git", .upToNextMajor(from: "1.2.1")),
+        .package(url: "https://github.com/metalurgical/BitcoinCore.Swift", branch: "upgrade_secp256k1_0_12_2"),
+        .package(url: "https://github.com/metalurgical/Hodler.Swift", branch: "upgrade_secp256k1_0_12_2"),
+        .package(url: "https://github.com/metalurgical/HdWalletKit.Swift", branch: "upgrade_secp256k1_0_12_2"),
         .package(url: "https://github.com/horizontalsystems/HsToolKit.Swift.git", .upToNextMajor(from: "2.0.5")),
     ],
     targets: [
